@@ -28,29 +28,29 @@ isup2pcap 1.3 BETA
 By default, it will output the pcap file in your current working directory.
 
 ```
-usage: isup2pcap [-h] [-V] [-m <Pcap filename>] [-s] [-o <Output Filename>]
+usage: isup2pcap [-h] [-V] [-m <PCAP Filename>] [-s] [-o <Output Filename>]
                  [-M <Merge Filename>] [-d] [-t] [-p <Output Path>] [-D]
                  [-w <Wireshark Path>] [--debug]
-                 <ISUP File>
+                 <ISUP Filename>
 
 
 ================================================================================
 
 positional arguments:
-  <ISUP File>           ISUP trace full decode in a .txt format
+  <ISUP Filename>       ISUP trace full decode in a .txt format
 
 optional arguments:
   -h, --help            show this help message and exit
   -V, --version         Display current version
-  -m <Pcap filename>    Allow to merge with another pcap, (typically the SIP
+  -m <PCAP Filename>    Allow to merge with another pcap, (typically the SIP
                         portion of the call)
-  -s                    Separate in an ISUP only pcap and an ISUP + SIP pcap.
+  -s                    Separate in a ISUP only pcap and a ISUP + SIP pcap.
   -o <Output Filename>  Set the output filename. Default:
                         ISUP2PCAP_{datetime}.pcap
   -M <Merge Filename>   Set the merged filename. Only work with -s option
                         Default: ISUP2PCAP_MERGED_{datetime}.pcap
   -d, --no-duplicate    Remove duplicate ISUP message
-  -t, --time            Show the elapsed time for each section.
+  -t, --time            Show the elasped time for each section.
   -p <Output Path>      Set the output directory. Default: Current working
                         directory
   -D, --dump            Keep the auto-generated ISUP_HEX_DUMP.txt. Default:
