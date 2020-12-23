@@ -102,7 +102,7 @@ DONE! 17 ISUP msg converted
 
 
 ## Contributing
-Pull requests are welcome. Currently compatible with Oracle Tekelec Protrace full decode in a .txt format. I'm looking to make this compatible with other ss7 trace decode format. If you would like to contribute, contact me. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. Currently compatible with Oracle Tekelec Protrace full decode in a .txt format. I'm looking to make this compatible with other ss7 trace decode format. If you would like to contribute, contact me at [jonathan.rhau@bell.ca](mailto:jonathan.rhau@bell.ca). For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
