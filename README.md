@@ -16,12 +16,6 @@
 1. Copy isup2pcap.exe in your desired location.
 2. When running the command, use the `-w` option to specify where your Wireshark folder is located.
 
-### Verification
-```bash
-> isup2pcap --version
-isup2pcap 1.3 BETA
-```
-
 ## Installation (other OS)
 ### Recommended way:
 1. Rebuild the executable with `pyinstaller --onefile isup2pcap.py` from your OS.
@@ -30,6 +24,12 @@ isup2pcap 1.3 BETA
 
 ## No Installation
 1. Execute directly with python: `python isup2pcap.py ...` if Wireshark path added to your system path or use `-w` option.
+
+### Verification
+```bash
+> isup2pcap --version
+isup2pcap 1.3 BETA
+```
 
 
 ## Usage
