@@ -1,27 +1,35 @@
 # isup2pcap
 
-**isup2pcap** converts a traditional SS7 ISUP trace from a text format to a pcap format. It then can be viewed and analyzed in Wireshark. Having the SS7 ISUP trace in a pcap format allows us to merge it with a SIP trace pcap and do a side-by-side comparison using the SIP ladder diagram. It's great for troubleshooting when SIP and ISUP are in the same place!
+`isup2pcap` converts a traditional SS7 ISUP trace from a text format to a pcap format. It then can be viewed and analyzed in Wireshark. Having the SS7 ISUP trace in a pcap format allows us to merge it with a SIP trace pcap and do a side-by-side comparison using the SIP ladder diagram. It's great for troubleshooting when SIP and ISUP are in the same place!
 
 ## Dependencies
 
-**isup2pcap** leverages Wireshark **text2pcap.exe** and **mergecap.exe**.
+`isup2pcap` leverages Wireshark `text2pcap.exe` and `mergecap.exe`.
 
 
-## Installation
-
+## Installation (windows)
 ### Recommended way:
 1. Copy isup2pcap.exe into your Wireshark folder.
 2. Add your Wireshark folder to your system path. This will make the script available from anywhere in your cmd prompt.
 
 ### Alternative way:
 1. Copy isup2pcap.exe in your desired location.
-2. When running the command, use the **-w** option to specify where your Wireshark folder is located.
+2. When running the command, use the `-w` option to specify where your Wireshark folder is located.
 
 ### Verification
 ```bash
 > isup2pcap --version
 isup2pcap 1.3 BETA
 ```
+
+## Installation (other OS)
+### Recommended way:
+1. Rebuild the executable with `pyinstaller --onefile isup2pcap.py` from your OS.
+2. Copy the excutable in your Wireshark folder.
+2. Add your Wireshark folder to your system path. This will make the script available from anywhere in your cmd prompt.
+
+## No Installation
+1. Execute directly with python: `python isup2pcap.py ...` if Wireshark path added to your system path or use `-w` option.
 
 
 ## Usage
@@ -102,7 +110,7 @@ DONE! 17 ISUP msg converted
 
 
 ## Contributing
-Pull requests are welcome. Currently compatible with Oracle Tekelec Protrace full decode in a .txt format. I'm looking to make this compatible with other ss7 trace decode format. If you would like to contribute, contact me at [jonathan.rhau@bell.ca](mailto:jonathan.rhau@bell.ca). For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
