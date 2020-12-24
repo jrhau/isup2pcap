@@ -23,7 +23,7 @@
 2. Add your Wireshark folder to your system path. This will make the script available from anywhere in your cmd prompt.
 
 ## No Installation
-1. Execute directly with python: `python isup2pcap.py ...` if Wireshark path added to your system path or use `-w` option.
+1. Execute directly with python: `python isup2pcap.py ...` if Wireshark path was added to your system path or use `-w` option.
 
 ### Verification
 ```bash
