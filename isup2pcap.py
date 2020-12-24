@@ -242,7 +242,7 @@ class isup2pcap:
         else:
             self.raw = None
             msg = f"Match error: {len(self.timestamps)} timestamps found "
-            msg += "vs {len(self.decodes)} decodes found"
+            msg += f"vs {len(self.decodes)} decodes found"
             raise Exception(msg)
 
         if self.rm_isup_duplicate:
@@ -305,7 +305,7 @@ class isup2pcap:
 
         self.run_win_cmd(cmd + options)
 
-        # Option to keep the Isup HEX dump. Good for troubleshooting
+        # Option to keep the ISUP HEX dump. Good for troubleshooting
         if not self.dump:
             os.remove(self.isup_hex_dump)
 
@@ -326,6 +326,8 @@ class isup2pcap:
 
         self.run_win_cmd(cmd + options)
 
+        # If -s (separate) option is not used and Merge was call
+        # Remove the ISUP only pcap and rename the Merge pcap
         if not self.seperate_files:
             os.remove(self.isup_pcap)
             os.rename(self.merge_name, self.out_name)
@@ -338,7 +340,7 @@ if __name__ == "__main__":
         formatter_class=argparse.RawDescriptionHelpFormatter,
         # usage="isup2pcap [OPTION] ... <ISUP Trace file>",
         description=textwrap.dedent(
-            f"""\
+        f"""\
         Convert a traditional ISUP trace from a .txt to a .pcap format.
         It uses Wireshark text2pcap and mergecap.
 
@@ -353,7 +355,7 @@ if __name__ == "__main__":
         """
         ),
         epilog=textwrap.dedent(
-            f"""\
+        f"""\
         {'='*80}
 
         PS: Set your Point Codes display format in Wireshark to our standards.
@@ -365,7 +367,6 @@ if __name__ == "__main__":
         To report an issue, email me at jonathan.rhau@bell.ca with details.
 
                                                             - By Jonathan Rhau
-
         """
         ),
     )
