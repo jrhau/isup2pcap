@@ -35,7 +35,7 @@ class isup2pcap:
 
         To report an issue, email me at jonathan.rhau@bell.ca with details.
 
-                                                    - By Jonathan Rhau @ C20IT
+                                                         - By Jonathan Rhau
     """
 
     def __init__(
