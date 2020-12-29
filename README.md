@@ -2,6 +2,22 @@
 
 `isup2pcap` converts a traditional SS7 ISUP trace from a text format to a pcap format. It then can be viewed and analyzed in Wireshark. Having the SS7 ISUP trace in a pcap format allows us to merge it with a SIP trace pcap and do a side-by-side comparison using the SIP ladder diagram. It's great for troubleshooting when SIP and ISUP are in the same place!
 
+Also, you can setup the equivalent of a hosts file for Point-Codes.
+
+See [ss7PCs](https://www.wireshark.org/docs/wsug_html_chunked/ChAppFilesConfigurationSection.html)
+> ss7pcs
+> Wireshark uses the ss7pcs file to translate SS7 point codes to node names.
+> 
+> At program start, if there is a ss7pcs file in the personal configuration folder, it is read.
+> 
+> Each line in this file consists of one network indicator followed by a dash followed by a point code in decimal and a node name separated by whitespace or tab.
+> 
+> An example is:
+> 
+> 2-1234 MyPointCode1
+> The settings from this file are read in at program start and never written by Wireshark.
+
+
 ## Dependencies
 
 `isup2pcap` leverages Wireshark `text2pcap.exe` and `mergecap.exe`.
