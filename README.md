@@ -81,7 +81,7 @@ optional arguments:
                         Auto-Remove after execution
   -w <Wireshark Path>   Indicate your Wireshark directory. Use this option if
                         you did not add Wireshark to your system path.
-  --debug               Print debug output. WARNING: very timing!
+  --debug               Print debug output. WARNING: very verbose!
 
 ================================================================================
 
