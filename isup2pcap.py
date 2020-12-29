@@ -35,7 +35,7 @@ class isup2pcap:
 
         To report an issue, email me at jonathan.rhau@bell.ca with details.
 
-                                                    - By Jonathan Rhau @ C20IT
+                                                             - By Jonathan Rhau
     """
 
     def __init__(
@@ -444,7 +444,7 @@ if __name__ == "__main__":
         "--debug",
         dest="debug",
         action="store_true",
-        help="Print debug output. WARNING: very timing!",
+        help="Print debug output. WARNING: very verbose!",
     )
 
     args = parser.parse_args()
